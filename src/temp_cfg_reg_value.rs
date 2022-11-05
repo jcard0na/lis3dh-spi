@@ -35,7 +35,7 @@ impl TempCfgRegValue {
         };
         TempCfgRegValue { temp, adc }
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         let mut result = 0_u8;
         if self.adc == OnOff::Enabled {
             result += 1 << ADC_EN_BIT_OFFSET;

@@ -94,7 +94,7 @@ impl CtrlReg3Value {
             ),
         }
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         (self.interrupt_1_click as u8) << CLICK_BIT_OFFSET
             | (self.interrupt_1_ia1 as u8) << IA_1_BIT_OFFSET
             | (self.interrupt_1_ia2 as u8) << IA_2_BIT_OFFSET

@@ -74,7 +74,7 @@ impl CtrlReg5Value {
     pub fn d4_detection_on_int_2(&self) -> OnOff {
         self.d4_detection_on_int_2
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         (self.boot as u8) << BOOT_BIT_OFFSET
             | (self.fifo as u8) << FIFO_EN_BIT_OFFSET
             | (self.latch_int_on_int_1_src as u8) << LIR_INT1_BIT_OFFSET

@@ -118,7 +118,7 @@ impl CtrlReg4Value {
     pub fn bdu(&self) -> BlockDataUpdate {
         self.bdu
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         (self.bdu as u8) << BDU_SETTING_BIT_OFFSET
             | (self.ble as u8) << BLE_SETTING_BIT_OFFSET
             | (self.fs as u8) << FULL_SCALE_SELECTION_OUTPUT_MODE_BIT_OFFSET

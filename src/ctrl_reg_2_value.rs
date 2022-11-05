@@ -115,7 +115,7 @@ impl CtrlReg2Value {
     pub fn hpm(&self) -> HighPassFilterModeSelection {
         self.hpm
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         (self.hpm as u8) << HPM_BIT_OFFSET
             | (self.hpcf as u8) << HPCF_BIT_OFFSET
             | (self.fds as u8) << FDS_BIT_OFFSET

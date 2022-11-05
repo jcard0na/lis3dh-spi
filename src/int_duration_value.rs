@@ -23,7 +23,7 @@ impl IntDuration {
             duration: (value & 0b0111_1111),
         }
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         self.duration
     }
 }

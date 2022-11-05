@@ -20,7 +20,7 @@ impl CtrlReg0Value {
     pub fn pull_up_connected_sdo_sa_0_pin(&self) -> OnOff {
         self.pull_up_connected_sdo_sa_0_pin
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         let value = if self.pull_up_connected_sdo_sa_0_pin == Enabled {
             1
         } else {

@@ -99,7 +99,7 @@ impl IntCfg {
             ),
         }
     }
-    pub(super) fn get_raw_value(&self) -> u8 {
+    pub fn get_raw_value(&self) -> u8 {
         (self.aoi as u8) << AOI_BIT_OFFSET
             | (self.six_d as u8) << SIXD_BIT_OFFSET
             | (self.zhie as u8) << ZHIE_BIT_OFFSET
